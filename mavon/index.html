@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mavon</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- font2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- main css file -->
+    <link rel="stylesheet" href="homepage-main.min.css">
+
+    <!-- js files -->
+    <script src="js/randomCode.js"></script>
+    <!-- <script src="js/discountCode.js"></script> -->
+    <script src="js/header.js" defer></script>
+    <script src="js/homepage.js" defer></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <!-- top part -->
+        <div class="top-header">
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="welcome">
+                <span>Welcome to our store</span>
+                <button id="more-btn">More <i class="fa-solid fa-caret-down"></i></button>
+            </div>
+            <div class="currency">
+                <button class="current"><span>United States USD $</span><i class="fa-solid fa-caret-down"></i></button>
+                <div class="dropdown">
+                    <div>
+                        <input type="radio" id="usd" name="currency" value="usd" checked>
+                        <label for="usd">United States USD $</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="gbp" name="currency" value="gbp">
+                        <label for="gbp">United Kingdom GBP £</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="eur" name="currency" value="eur">
+                        <label for="eur">Europe EUR €</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <p>UP TO 50% OFF</p>
+            <h2>New Arrival Products</h2>
+            <a href="#">Shop Now!</a>
+        </div>
+        <!-- main part -->
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#">Store</a>
+                <a href="#">Blog</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <div class="options">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="divider"></div>
+                <button id="shopping-cart-btn"><i class="fa-solid fa-cart-shopping"></i>
+                    <div class="cart-number">0</div>
+                </button>
+                <div class="divider"></div>
+                <button><i class="fa-regular fa-user"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- shopping cart sidebar -->
+    <div class="shopping-cart">
+        <div class="title">
+            <h2><i class="fa-solid fa-check"></i> Shopping Cart</h2>
+            <button class="close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="content">
+            <p class="empty">Your cart is empty</p>
+            <a href="#" class="continue">continue shopping</a>
+        </div>
+    </div>
+
+    <!-- discount pop up-->
+    <div class="discount">
+
+        <!-- successfuly copied discount -->
+        <div class="success">
+            <i class="fa-regular fa-circle-check"></i>
+            <p>your code (<span class="code"></span>) offer was successfuly copied!</p>
+        </div>
+        <div class="img">
+            <img src="img/discount.png" alt="discount">
+        </div>
+        <div class="content">
+            <p>WAIT WE HAVE A SPECIAL OFFER FOR YOU</p>
+            <h2>Recieve 10% OFF your first order</h2>
+            <label>Enter your email for you exclusive offer:</label>
+            <input type="email" placeholder="Your email address" required>
+            <span class="error"></span>
+            <button class="showBtn">SHOW MY OFFER CODE</button>
+            <div class="offer">
+                <span>Your code offer is: <span class="code"></span></span>
+                <button class="copy">Click to copy</button>
+            </div>
+        </div>
+        <button class="close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- scroll to top -->
+    <button class="scrollBtn">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <main>
+        <!-- cover -->
+        <div class="cover">
+            <!-- first page -->
+            <img src="img/cover1.webp" alt="cover1" id="coverImg1" class="img-show">
+            <div class="content content-show" id="contentP1">
+                <h2>Quality, you can trust.</h2>
+                <p>Explore pieces that speak volumes through detail, texture, and a perfect fit. Each garment telling a
+                    quiet story of timeless style.</p>
+                <a href="#">SHOP NOW</a>
+            </div>
+
+            <!-- second page -->
+            <img src="img/cover2.webp" alt="cover2" id="coverImg2">
+            <div class="content" id="contentP2">
+                <h2>Clothing designed to last.</h2>
+                <p>Feel the Quality. Wear the Confidence.</p>
+                <a href="#">SHOP NOW</a>
+            </div>
+
+            <!-- third page -->
+            <img src="img/cover3.webp" alt="cover3" id="coverImg3">
+            <div class="content" id="contentP3">
+                <h2>Simple. Elegant.</h2>
+                <p>Experience comfort-driven design and timeless essentials for every day of the week.</p>
+                <a href="#">SHOP NOW</a>
+            </div>
+
+            <!-- slideshow button -->
+            <div class="buttons">
+                <button id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+
+                <button>
+                    <input type="radio" id="coverP1" name="cover-pages" value="1" checked>
+                    <label for="coverP1"></label>
+                </button>
+
+                <button>
+                    <input type="radio" id="coverP2" name="cover-pages" value="2">
+                    <label for="coverP2"></label>
+                </button>
+
+
+                <button>
+                    <input type="radio" id="coverP3" name="cover-pages" value="3">
+                    <label for="coverP3"></label>
+                </button>
+
+                <button id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+
+            </div>
+        </div>
+
+        <!-- qualities -->
+        <div class="qualities">
+            <div class="item">
+                <div class="img">
+                    <img src="img/qualities1.webp" alt="icon">
+                </div>
+                <div class="content">
+                    <h3>Quality Products</h3>
+                    <p>Crafted with care using premium materials — made to last, made to impress.</p>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="item">
+                <div class="img">
+                    <img src="img/qualities2.png" alt="icon">
+                </div>
+                <div class="content">
+                    <h3>Safe Return Process</h3>
+                    <p>Return items within 10 days in original condition.</p>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="item">
+                <div class="img">
+                    <img src="img/qualities3.webp" alt="icon">
+                </div>
+                <div class="content">
+                    <h3>Fast Delivery</h3>
+                    <p>We process and ship within 24 hours for swift delivery to your door.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop by collection -->
+        <div class="collections">
+            <div class="title">
+                <h2>Shop by collection</h2>
+                <a href="#">see all</a>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <a href="#">
+                        <img src="img/collection1.png" alt="Women fashion">
+                        <span>Women fashion</span>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="img/collection2.png" alt="Men fashion">
+                        <span>Men fashion</span>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="img/collection3.png" alt="kids fashion">
+                        <span>kids fashion</span>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="img/collection4.png" alt="New arrivals">
+                        <span>New arrivals</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured collection -->
+        <div class="featured">
+            <div class="title">
+                <h2>Featured collection</h2>
+                <a href="#">see all</a>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <a href="#">
+                        <div class="img">
+                            <img src="img/featuredColletion1.avif" alt="clothes">
+                            <span class="sale">SALE</span>
+                            <button><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="content">
+                            <h3>Women Coats</h3>
+                            <div class="prices">
+                                <span class="oldprice">$110.00</span>
+                                <span class="price">$80.00</span>
+                            </div>
+                            <div class="colors">
+                                <div class="color" style="background-color: black;"></div>
+                                <div class="color" style="background-color: #0000FF;"></div>
+                                <div class="color" style="background-color: #FFFF00;"></div>
+                                <span>+2</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="img">
+                            <img src="img/featuredColletion2.avif" alt="clothes">
+                            <button><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="content">
+                            <h3>Women Dangle Earrings</h3>
+                            <div class="prices">
+                                <span class="text">From</span>
+                                <span class="price">$30.00</span>
+                            </div>
+                            <div class="colors">
+                                <div class="color" style="background-color: #FF0000;"></div>
+                                <div class="color" style="background-color: #FFFFFF;"></div>
+                                <div class="color" style="background-color: #8B0000;"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="img">
+                            <img src="img/featuredColletion3.avif" alt="clothes">
+                            <button><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="content">
+                            <h3>Long sleeve top</h3>
+                            <div class="prices">
+                                <span class="price">$70.00</span>
+                            </div>
+                            <div class="colors">
+                                <div class="color" style="background-color: #FFFFFF;"></div>
+                                <div class="color" style="background-color: black;"></div>
+                                <div class="color" style="background-color: #0000FF;"></div>
+                                <span>+1</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- bar -->
+        <div class="bar">
+            <div class="texts">
+                <div class="text">
+                    <span>Safe Return Process.</span>
+                    <span>Payment Secure</span>
+                    <span>50% Sale OFF</span>
+                    <span>Return Policy</span>
+                    <span>Welcome to Mavon</span>
+                    <span>Free Shipping</span>
+                    <span>Fast Delivery.</span>
+                    <span>Quality Products.</span>
+
+                </div>
+                <div class="text">
+                    <span>Safe Return Process.</span>
+                    <span>Payment Secure</span>
+                    <span>50% Sale OFF</span>
+                    <span>Return Policy</span>
+                    <span>Welcome to Mavon</span>
+                    <span>Free Shipping</span>
+                    <span>Fast Delivery.</span>
+                    <span>Quality Products.</span>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- shop the look -->
+        <div class="look">
+            <div class="img">
+                <img src="img/look.webp" alt="">
+            </div>
+            <div class="content">
+                <h2>Shop the Look</h2>
+                <p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on
+                    availability, style, or even provide a review.</p>
+                <a href="#">Shop Now</a>
+            </div>
+        </div>
+
+        <!-- Customers feedback -->
+        <div class="feedback">
+            <div class="heading">
+                <h2>Customers feedback</h2>
+                <div class="buttons">
+                    <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="comments">
+                <div class="item item-show">
+                    <div class="comment">
+                        <h3>Exactly What I Was Looking For</h3>
+                        <p>“The fit is perfect, and the material feels premium. Honestly surprised by the quality at
+                            this price.”</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="img"><img src="img/feedback1.webp" alt=""></div>
+                        <div class="title">
+                            <span class="name">Jordan K.</span>
+                            <span class="job">Photographer, Toronto</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item-show">
+                    <div class="comment">
+                        <h3>Impressed With The Service</h3>
+                        <p>“Delivery was impressively fast, and everything arrived in perfect condition with neat,
+                            eco-friendly packaging. I’ll definitely be coming back for more.”</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="img"><img src="img/feedback2.webp" alt=""></div>
+                        <div class="title">
+                            <span class="name">Amelia R.</span>
+                            <span class="job">Student, Montreal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item-show">
+                    <div class="comment">
+                        <h3>Style + Comfort = Win</h3>
+                        <p>“I ordered a hoodie and it instantly became my favorite piece. The fabric is soft but still
+                            holds its shape, and the fit is exactly how I like it.”</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="img"><img src="img/feedback3.webp" alt=""></div>
+                        <div class="title">
+                            <span class="name">Jordan K.</span>
+                            <span class="job">Photographer, Toronto</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="comment">
+                        <h3>Better Than Expected</h3>
+                        <p>“I was a little unsure before buying, but the product exceeded my expectations. Highly
+                            recommend.”</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="img"><img src="img/feedback1.webp" alt=""></div>
+                        <div class="title">
+                            <span class="name">Priya S</span>
+                            <span class="job">UI Designer, Calgary</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="comment">
+                        <h3> Simple and Clean</h3>
+                        <p>“The site was really easy to navigate, which made the whole shopping experience quick and
+                            stress-free. It felt well-designed and user-friendly from start to finish.”</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="img"><img src="img/feedback1.webp" alt=""></div>
+                        <div class="title">
+                            <span class="name">Kevin M.</span>
+                            <span class="job">Freelancer, Ottawa</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="comment">
+                        <h3>Not What I Expected</h3>
+                        <p>“The item looked great online, but in person it didn’t feel as high quality. The sizing was
+                            also a bit off.”</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="img"><img src="img/feedback3.webp" alt=""></div>
+                        <div class="title">
+                            <span class="name">Marcus L.</span>
+                            <span class="job">Retail Assistant, Winnipeg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Play Video -->
+        <div class="look video">
+            <div class="img">
+                <iframe width="966" height="543" src="https://www.youtube.com/embed/_9VUPq3SxOc"
+                    title="Share your brand story by adding a video to your store" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="content">
+                <h2>Play Video</h2>
+                <p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on
+                    availability, style, or even provide a review.</p>
+                <a href="#">Shop Now</a>
+            </div>
+        </div>
+
+        <!-- Share information about your brand -->
+        <div class="info">
+            <p>Share information about your brand with your customers. Describe a product, make announcements, or
+                welcome customers to your store.</p>
+            <div class="sources">
+                <a href="#"><img src="img/source1.avif" alt="source"></a>
+                <a href="#"><img src="img/source2.avif" alt="source"></a>
+                <a href="#"><img src="img/source3.avif" alt="source"></a>
+                <a href="#"><img src="img/source4.avif" alt="source"></a>
+                <a href="#"><img src="img/source5.avif" alt="source"></a>
+                <a href="#"><img src="img/source6.avif" alt="source"></a>
+            </div>
+        </div>
+
+        <!-- emails -->
+        <div class="email">
+            <div class="title">
+                <h2>Subscribe to our emails</h2>
+                <p>Be the first to know about new collections and exclusive offers.</p>
+            </div>
+            <form action="">
+                <input type="email" placeholder="Enter your email">
+                <input type="submit" value="SUBSCRIBE">
+            </form>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="top-footer">
+            <div class="brand">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <p>We are a team who craft everyday essentials with care, comfort, and modern style.</p>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>My Account</h3>
+                <ul>
+                    <li><a href="#">Track Orders</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Order History</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Latest News</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="item talk">
+                <h3>Talk To Us</h3>
+                <p>Got Questions? Call us</p>
+                <a href="#" class="phone">+670 413 90 762</a>
+                <a href="#" class="mail"><i class="fa-solid fa-envelope"></i>
+                    <span>shofy@support.com</span></a>
+                <a href="#" class="mail">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>79 Sleepy Hollow St.Jamaica, New York 1432</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="bottom-footer">
+            <p>© 2025 All Rights Reserved</p>
+            <div class="images">
+                <img src="img/footer1.png" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

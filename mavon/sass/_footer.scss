@@ -1,0 +1,117 @@
+footer {
+    margin-top: 75px;
+    background-color: $pinkbackground;
+    padding: 24px;
+
+    .top-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 24px;
+        border-bottom: 1px solid lightGray;
+
+        .brand {
+            width: 30%;
+
+            .logo {
+                img {
+                    width: 120px;
+                }
+            }
+
+            p {
+                margin: 16px 0;
+                width: 80%;
+            }
+
+            .social {
+                a {
+                    padding: 0 4px;
+                    transition: .3s;
+
+                    i {
+                        font-size: 18px;
+                    }
+
+                    &:hover {
+                        color: $selectedColor;
+                        transform: scale(1.1);
+                    }
+                }
+
+            }
+        }
+
+        .item {
+            width: 20%;
+
+            h3 {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 12px;
+                margin-left: -15px;
+            }
+
+            ul {
+                li {
+                    transition: .3s;
+
+                    a {
+                        margin: 2px;
+                        padding: 4px 0;
+                    }
+
+                    &:hover {
+                        transform: translateX(10px);
+                        list-style-image: url('img/footerLink.svg');
+                        a {
+                            color: $selectedColor;
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .talk {
+            h3 {
+                margin-left: 0 !important;
+            }
+
+            p {
+                font-size: 12px;
+                color: $dark-gray;
+                margin-bottom: 6px;
+            }
+
+            .phone {
+                margin-bottom: 16px;
+                font-weight: 600;
+                font-size: 20px;
+                transition: .2s;
+                &:hover {
+                    color: $selectedColor;
+                }
+            }
+
+            .mail {
+                margin-bottom: 10px;
+                transition: .3s;
+                &:hover {
+                    color: $selectedColor;
+                }
+            }
+        }
+    }
+
+    .bottom-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 12px 0;
+        .images {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

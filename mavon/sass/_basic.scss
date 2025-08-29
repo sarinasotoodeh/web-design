@@ -1,0 +1,26 @@
+* {
+    @include openSans();
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+img {
+    display: block;
+}

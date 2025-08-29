@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Dangle Earrings</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- font2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- main css file -->
+    <link rel="stylesheet" href="product.min.css">
+
+    <!-- js files -->
+    <script src="js/randomCode.js"></script>
+    <!-- <script src="js/discountCode.js"></script> -->
+
+    <script src="js/header.js" defer></script>
+    <script src="js/product.js" defer></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <!-- top part -->
+        <div class="top-header">
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="welcome">
+                <span>Welcome to our store</span>
+                <button id="more-btn">More <i class="fa-solid fa-caret-down"></i></button>
+            </div>
+            <div class="currency">
+                <button class="current"><span>United States USD $</span><i class="fa-solid fa-caret-down"></i></button>
+                <div class="dropdown">
+                    <div>
+                        <input type="radio" id="usd" name="currency" value="usd" checked>
+                        <label for="usd">United States USD $</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="gbp" name="currency" value="gbp">
+                        <label for="gbp">United Kingdom GBP £</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="eur" name="currency" value="eur">
+                        <label for="eur">Europe EUR €</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <p>UP TO 50% OFF</p>
+            <h2>New Arrival Products</h2>
+            <a href="#">Shop Now!</a>
+        </div>
+        <!-- main part -->
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#">Store</a>
+                <a href="#">Blog</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <div class="options">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="divider"></div>
+                <button id="shopping-cart-btn"><i class="fa-solid fa-cart-shopping"></i>
+                    <div class="cart-number">0</div>
+                </button>
+                <div class="divider"></div>
+                <button><i class="fa-regular fa-user"></i></button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- shopping cart sidebar -->
+    <div class="shopping-cart">
+        <div class="title">
+            <h2><i class="fa-solid fa-check"></i> <span>Shopping Cart</span></h2>
+            <button class="close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="content">
+            <p class="empty">Your cart is empty</p>
+            <a href="#" class="continue">continue shopping</a>
+            <!-- sample item -->
+            <!-- <div class="item">
+                <div class="img">
+                    <img src="img/product1.webp" alt="earring">
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <h4>Women Dangle Earrings</h4>
+                    </a>
+                    <span class="colorBox">Color: <span class="color">dark red</span></span>
+                    <div class="price-div">
+                        <span class="price first">$50.00</span>
+                        <span> <i class="fa-solid fa-xmark"></i> </span>
+                        <span class="quantity-num">1</span>
+                        <span> = </span>
+                        <span class="price final">$50.00</span>
+                    </div>
+                    <div class="options">
+                        <div class="numberBox">
+                            <button class="minus not-clickable"><i class="fa-solid fa-minus"></i></button>
+                            <span class="number">1</span>
+                            <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <button>Remove</button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="total">
+            <div class="options">
+                <button class="note"><i class="fa-solid fa-pen-to-square"></i> Note</button>
+                <div class="line"></div>
+                <button class="shipping"><i class="fa-solid fa-truck"></i> Shipping</button>
+            </div>
+            <div class="discount">
+                <label for="discount">Enter your discount code:</label>
+                <div class="items">
+                    <input type="text" name="discount" placeholder="A88bqK" onfocus="">
+                    <button>submit</button>
+                </div>
+            </div>
+            <div class="subtotal">
+                <h3>Subtotal</h3>
+                <div>
+                    <p class="price pre-discount"></p>
+                    <span class="price">$810.00</span>
+                </div>
+            </div>
+            <p>Taxes and shipping calculated at checkout</p>
+            <div class="result">
+                <button>View Cart</button>
+                <button class="second">Check Out</button>
+            </div>
+            <div class="note-div">
+                <h4>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <span>Add note for seller</span>
+                </h4>
+                <textarea name="noteForSeller" rows="7" placeholder="Order special instructions"></textarea>
+
+                <div class="result">
+                    <button class="first">
+                        <span>
+                            Save
+                        </span>
+                        <i class="fa-solid fa-spinner loading"></i></button>
+                    <button class="second">Cancel</button>
+                </div>
+            </div>
+            <div class="shipping-div">
+                <h4>Estimate shipping rates</h4>
+                <select id="country" name="country">
+                    <option value="Afghanistan">---</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Åland Islands">Åland Islands</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="American Samoa">American Samoa</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Anguilla">Anguilla</option>
+                    <option value="Antarctica">Antarctica</option>
+                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Aruba">Aruba</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Belize">Belize</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Bermuda">Bermuda</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Bouvet Island">Bouvet Island</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                    <option value="Brunei Darussalam">Brunei Darussalam</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Cape Verde">Cape Verde</option>
+                    <option value="Cayman Islands">Cayman Islands</option>
+                    <option value="Central African Republic">Central African Republic</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Chile">Chile</option>
+                    <option value="China">China</option>
+                    <option value="Christmas Island">Christmas Island</option>
+                    <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Comoros">Comoros</option>
+                    <option value="Congo">Congo</option>
+                    <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                    <option value="Cook Islands">Cook Islands</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cote D'ivoire">Cote D'ivoire</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="Dominican Republic">Dominican Republic</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                    <option value="Faroe Islands">Faroe Islands</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="French Guiana">French Guiana</option>
+                    <option value="French Polynesia">French Polynesia</option>
+                    <option value="French Southern Territories">French Southern Territories</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Gibraltar">Gibraltar</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Greenland">Greenland</option>
+                    <option value="Grenada">Grenada</option>
+                    <option value="Guadeloupe">Guadeloupe</option>
+                    <option value="Guam">Guam</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Guernsey">Guernsey</option>
+                    <option value="Guinea">Guinea</option>
+                    <option value="Guinea-bissau">Guinea-bissau</option>
+                    <option value="Guyana">Guyana</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                    <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Hong Kong">Hong Kong</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                    <option value="Iraq">Iraq</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Isle of Man">Isle of Man</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Jersey">Jersey</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Kiribati">Kiribati</option>
+                    <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of
+                    </option>
+                    <option value="Korea, Republic of">Korea, Republic of</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Macao">Macao</option>
+                    <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic
+                        of</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Marshall Islands">Marshall Islands</option>
+                    <option value="Martinique">Martinique</option>
+                    <option value="Mauritania">Mauritania</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Mayotte">Mayotte</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                    <option value="Moldova, Republic of">Moldova, Republic of</option>
+                    <option value="Monaco">Monaco</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Nauru">Nauru</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Netherlands Antilles">Netherlands Antilles</option>
+                    <option value="New Caledonia">New Caledonia</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Niue">Niue</option>
+                    <option value="Norfolk Island">Norfolk Island</option>
+                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Palau">Palau</option>
+                    <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Papua New Guinea">Papua New Guinea</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Pitcairn">Pitcairn</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Puerto Rico">Puerto Rico</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Reunion">Reunion</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Russian Federation">Russian Federation</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Saint Helena">Saint Helena</option>
+                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                    <option value="Saint Lucia">Saint Lucia</option>
+                    <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                    <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                    <option value="Samoa">Samoa</option>
+                    <option value="San Marino">San Marino</option>
+                    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Solomon Islands">Solomon Islands</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich
+                        Islands</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Suriname">Suriname</option>
+                    <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                    <option value="Swaziland">Swaziland</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Tajikistan">Tajikistan</option>
+                    <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Timor-leste">Timor-leste</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tokelau">Tokelau</option>
+                    <option value="Tonga">Tonga</option>
+                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Turkmenistan">Turkmenistan</option>
+                    <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                    <option value="Tuvalu">Tuvalu</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                    <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                    <option value="Vanuatu">Vanuatu</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Viet Nam">Viet Nam</option>
+                    <option value="Virgin Islands, British">Virgin Islands, British</option>
+                    <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                    <option value="Wallis and Futuna">Wallis and Futuna</option>
+                    <option value="Western Sahara">Western Sahara</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </select>
+
+                <input type="text" name="zipCode" placeholder="Postal/ZIP code">
+                <div class="result">
+                    <button class="first">
+                        <span>
+                            Calculate
+                        </span>
+                        <i class="fa-solid fa-spinner loading"></i></button>
+                    <button class="second">Cancel</button>
+                </div>
+                <p class="shippingResult">We found 0 shipping rate(s) for your address</p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="product">
+            <div class="img">
+                <div class="main-image">
+                    <img src="img/product1.webp" alt="earring">
+                </div>
+                <div class="other-images">
+                    <button class="chosen"><img src="img/product1.webp" alt="earring"></button>
+                    <button><img src="img/product2.webp" alt="earring"></button>
+                    <button><img src="img/product3.webp" alt="earring"></button>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="path">
+                    <a href="#">Home</a>
+                    <span>/</span>
+                    <a href="#">Women Dangle Earrings</a>
+                </div>
+                <div class="detail"><span class="bold">Sku: </span><span class="skuCode">46546</span></div>
+                <h1>Women Dangle Earrings</h1>
+                <div class="price-div">
+                    <span class="price first">$50.00</span>
+                    <span> <i class="fa-solid fa-xmark"></i> </span>
+                    <span class="quantity-num">1</span>
+                    <span> = </span>
+                    <span class="price final">$50.00</span>
+                </div>
+
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>(5)</span>
+                </div>
+                <div class="detail"><span class="bold">Vendor:</span> Mavon</div>
+                <div class="stock green">
+                    <span>50 in stock</span>
+                    <div class="bar">
+                        <div class="filledBar" style="width: 71%;"></div>
+                    </div>
+                </div>
+                <div class="colorDiv">
+                    <p>Color: <span class="colorSpan">red</span></p>
+                    <div class="images">
+                        <button class="chosen"><img src="img/product1.webp" alt="earring"></button>
+                        <button><img src="img/product2.webp" alt="earring"></button>
+                        <button><img src="img/product3.webp" alt="earring"></button>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <span class="bold">Quantity:</span>
+                    <p class="error"></p>
+                    <div class="items">
+                        <div class="numberBox">
+                            <button class="minus not-clickable"><i class="fa-solid fa-minus"></i></button>
+                            <span class="number">1</span>
+                            <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <button class="addCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Add To Cart</span>
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <button class="buy">Buy it now</button>
+                <div class="pickup">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Pickup available at <span class="bold">Germany Warehouse</span></span>
+                    <p>Usually ready in 5+ days</p>
+                    <a href="#">Check availability at other stores</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- More information -->
+        <div class="info">
+            <div class="buttons">
+                <button index="0" lineWidth="130px" left="29.8%" class="active">Description</button>
+                <button index="1" lineWidth="100px" left="42.3%">Reviews</button>
+                <button index="2" lineWidth="240px" left="52%">Terms and conditions</button>
+            </div>
+            <div class="line">
+                <div class="activeLine"></div>
+            </div>
+            <div class="contents">
+                <!-- description -->
+                <div class="content content-show" style="display: block;">
+                    <p>A common type of earring that drop below the earlobe and sway with movement is the dangle. They
+                        are
+                        available in a vast array of designs, sizes, and shapes, including those that are particularly
+                        made
+                        for women.
+
+                        Women's dangle earrings can be created from a variety of materials, including non-precious
+                        metals
+                        like brass or stainless steel, as well as valuable metals like gold, silver, or platinum. They
+                        can
+                        also be decorated with gems like diamonds, pearls, semiprecious stones, or other ornaments like
+                        beads or tassels.
+
+                        Chandelier earrings, hoop earrings, drop earrings, and tassel earrings are a few common designs
+                        of
+                        dangle earrings for women. They can add a touch of sophistication and elegance to any ensemble
+                        and
+                        are appropriate for both casual and formal settings.
+
+                        It's essential to take your face shape, hair length, and personal style into account when
+                        selecting
+                        dangle earrings. Certain face shapes might suit some styles more than others, and some might
+                        appear
+                        better with short hair or an updo. Additionally, it's crucial to think about the situation and
+                        select earrings that are suitable.</p>
+                </div>
+
+                <!-- Reviews -->
+                <div class="content">
+                    <div class="reviews">
+                        <div class="info">
+                            <div class="left">
+                                <span>3 reviews</span>
+                            </div>
+                            <div class="right">
+                                <a href="#">+ Review</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="review">
+
+                                <h5 class="title">
+                                    <a href="#">
+                                        Absolutely Gorgeous!
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <span> 5</span>
+                                    </div>
+                                </h5>
+                                <p>
+                                    I was blown away by how beautiful these earrings are in person. The red gemstone has
+                                    such a rich, deep color and a subtle shine that catches the light with every
+                                    movement. The detailing around the hook is elegant and has a slightly antique look,
+                                    which makes them stand out from typical fashion earrings. They feel solid and
+                                    well-crafted — not flimsy like some I've bought online before. I’ve already worn
+                                    them to two events and received multiple compliments. If you want something classy,
+                                    bold, and unique, these are worth every dollar. I’m already thinking of buying a
+                                    second pair!
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi ducimus repellendus
+                                    molestiae iure incidunt nihil qui atque quibusdam maiores iusto temporibus facere,
+                                    excepturi quisquam est, magnam voluptas, ipsum dolore et.
+                                </p>
+                                <div class="option-place"></div>
+
+                                <div class="options">
+                                    <i class="fa-regular fa-thumbs-up"><span> Helpful 123</span></i>
+                                    <i class="fa-regular fa-thumbs-down"><span> 19 </span></i>
+                                </div>
+                            </div>
+
+                            <div class="writer">
+                                <a href="#">benjamingauvin</a>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>Nov 7, 2024</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <a href="#">Permalink</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="review">
+                                <div class="header">
+                                    <span class="featured">FEATURED REVIEW</span>
+                                </div>
+                                <h5 class="title">
+                                    <a href="#">
+                                        Great Quality, Slightly Heavy
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <span> 4</span>
+                                    </div>
+                                </h5>
+                                <p>The quality of these earrings is impressive. The materials feel premium, and the
+                                    finish is clean with no rough edges or cheap shine. The red teardrop stones are
+                                    vibrant and really elevate the design. My only complaint is that they’re a little on
+                                    the heavy side, so I wouldn't wear them all day. That said, for evening outings or
+                                    special occasions, they’re perfect. </p>
+                                <p> I also appreciated the secure packaging and quick delivery. Overall, this is a great
+                                    value, especially if you're looking for a statement accessory. Just be aware of the
+                                    weight if you have sensitive ears like I do.</p>
+
+                                <div class="option-place"></div>
+
+                                <div class="options">
+                                    <i class="fa-regular fa-thumbs-up"><span> Helpful 56</span></i>
+                                    <i class="fa-regular fa-thumbs-down"><span> 6 </span></i>
+                                </div>
+                            </div>
+
+                            <div class="writer">
+                                <a href="#">kholidaa</a>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>Nov 4, 2024</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <a href="#">Permalink</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="review">
+
+                                <h5 class="title">
+                                    <a href="#">
+                                        Stylish and Unique
+
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                    <div class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <span> 4</span>
+                                    </div>
+                                </h5>
+                                <p>
+                                    These earrings offer such a unique look — they remind me of something vintage but
+                                    still feel modern enough to wear today. I especially love the teardrop shape and how
+                                    the red stone has a layered, faceted texture that gives it depth. The craftsmanship
+                                    is surprisingly good for the price. I docked one star only because I wish there were
+                                    more color choices available. I'd love to get these in green or black as well. Other
+                                    than that, they’re stunning and have quickly become one of my go-to accessories for
+                                    evenings out. People always notice and ask where I got them!
+                                </p>
+
+                                <div class="option-place"></div>
+
+                                <div class="options">
+                                    <i class="fa-regular fa-thumbs-up"><span> Helpful 60</span></i>
+                                    <i class="fa-regular fa-thumbs-down"><span>7 </span></i>
+                                </div>
+                            </div>
+
+                            <div class="writer">
+                                <a href="#">superman13</a>
+                                <i class="fa-solid fa-circle"></i>
+                                <span>18, Dec 2024</span>
+                                <i class="fa-solid fa-circle"></i>
+                                <a href="#">Permalink</a>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+                <!-- Terms and conditions -->
+                <div class="content">
+                    <p>By accessing and using our website, you agree to be bound by the terms and conditions outlined
+                        here. These terms govern all use of our services, including browsing, purchasing, and
+                        interacting with our content. Product descriptions, prices, and availability may be updated or
+                        modified at any time without prior notice. We strive to ensure accuracy but do not guarantee
+                        that all information is error-free. We reserve the right to cancel or limit orders for any
+                        reason, including suspected fraud, inventory errors, or violation of our policies. All content
+                        on the website—including images, logos, text, and designs—is the property of the brand and
+                        protected by copyright and intellectual property laws. Users may not duplicate, distribute, or
+                        use any content without written permission. By placing an order, you agree to provide accurate
+                        billing and shipping information. Personal data collected during your visit is handled in
+                        accordance with our Privacy Policy. Misuse of the website, such as unauthorized access,
+                        tampering, or abusive behavior, may result in restricted access and legal consequences. We
+                        encourage you to review these terms periodically, as your continued use of the site constitutes
+                        your ongoing agreement.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- new fashion -->
+        <div class="fashion">
+            <div class="content">
+                <p>You’re ready to go for a new fashion</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="img">
+                <img src="img/fashion.webp" alt="fashion">
+            </div>
+        </div>
+
+        <!-- emails -->
+        <div class="email">
+            <div class="title">
+                <h2>Subscribe to our emails</h2>
+                <p>Be the first to know about new collections and exclusive offers.</p>
+            </div>
+            <form action="">
+                <input type="email" placeholder="Enter your email">
+                <input type="submit" value="SUBSCRIBE">
+            </form>
+        </div>
+
+        <!-- shortcut -->
+        <div class="shortcut">
+            <img src="img/product1.webp" alt="">
+            <span>Women Dangle Earrings</span>
+            <div class="numberBox">
+                <button class="minus not-clickable"><i class="fa-solid fa-minus"></i></button>
+                <span class="number">1</span>
+                <button class="plus"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <button class="addCart">Add To Cart</button>
+            <button class="buy">Buy it now</button>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="top-footer">
+            <div class="brand">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <p>We are a team who craft everyday essentials with care, comfort, and modern style.</p>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>My Account</h3>
+                <ul>
+                    <li><a href="#">Track Orders</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Order History</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Latest News</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="item talk">
+                <h3>Talk To Us</h3>
+                <p>Got Questions? Call us</p>
+                <a href="#" class="phone">+670 413 90 762</a>
+                <a href="#" class="mail"><i class="fa-solid fa-envelope"></i>
+                    <span>shofy@support.com</span></a>
+                <a href="#" class="mail">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>79 Sleepy Hollow St.Jamaica, New York 1432</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="bottom-footer">
+            <p>© 2025 All Rights Reserved</p>
+            <div class="images">
+                <img src="img/footer1.png" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

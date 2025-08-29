@@ -1,0 +1,34 @@
+$selectedColor: #D6AA2B;
+$selectedColorDark: #c09516;
+$light: #f8f9fa;
+$dark: #212529;
+$light-gray: #B3B3B3;
+$dark-gray: #757575;
+$hover-gray: #3a3e42;
+$background: #090a0b;
+$links: #5798EE;
+$pinkbackground: #FEF9EE;
+
+@mixin openSans($weight:400) {
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    // light:300, regular:400, medium:500, semiBold:600, bold:700, extraBold:800
+    font-weight: $weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+
+@mixin interTight($weight:300) {
+    font-family: "Inter Tight", serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+  }
+
+
+@mixin perfectCentering() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
