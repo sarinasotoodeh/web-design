@@ -1,0 +1,365 @@
+// Titles
+.main-title {
+    color: $selectedColor;
+}
+
+.heading {
+    margin-bottom: 24px;
+    position: relative;
+
+    .heading-link {
+        h3 {
+            display: flex;
+            align-items: center;
+            font-size: 25px;
+            font-weight: 900;
+
+            .line {
+                color: $selectedColor;
+                font-weight: 900;
+                margin-right: 4px;
+            }
+
+            .detail {
+                color: $light-gray;
+                font-size: 14px;
+                transform: translate(8px, 2px);
+            }
+
+            i {
+                margin-left: 6px;
+                transition: .4s;
+                font-size: 20px;
+                margin-top: 4px;
+            }
+        }
+
+        &:hover i {
+            color: $selectedColor;
+            transform: translateX(8px);
+        }
+    }
+
+    .heading-extra-link {
+        color: $links;
+        position: absolute;
+        top: 4px;
+        right: 8px;
+        transition: .3s;
+        padding: 4px 12px;
+        &:hover {
+            background-color: #cae1ff;
+        }
+    }
+
+    .description {
+        margin-top: 8px;
+        color: $light-gray;
+
+        .description-link {
+            color: $links;
+        }
+    }
+}
+
+// carousel prev and next button
+.carousel-button {
+    z-index: 12;
+    font-weight: 900;
+    font-size: 36px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.75) !important;
+    color: white;
+    display: inline-block;
+    border-radius: 12px;
+    position: absolute;
+    top: 40%;
+}
+
+.carousel-prev {
+    left: -16px;
+}
+
+.carousel-next {
+    right: -16px;
+}
+
+// movie items
+.movie-items {
+    .movie-item {
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        overflow: hidden;
+        background-color: $dark;
+
+        .movie-image {
+            position: relative;
+            transition: .3s;
+            width: 100%;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+
+            .watchlist {
+                position: absolute;
+                top: -3px;
+                left: -6px;
+                padding: 0;
+
+                i {
+                    position: relative;
+                    font-size: 45px;
+                    display: inline-flex;
+                    color: rgba(0, 0, 0, 0.4);
+                    transition: .3s;
+
+                    &::after {
+                        content: "+";
+                        position: absolute;
+                        top: -8%;
+                        left: 32%;
+                        color: $light;
+                        font-size: 30px;
+                        transition: .3s;
+                    }
+                }
+
+                &:hover i {
+                    color: rgba(0, 0, 0, 0.8);
+
+                    &::after {
+                        color: $selectedColor;
+                    }
+                }
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        .movie-content {
+            margin-top: 6px;
+            padding: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .movie-title {
+                display: flex;
+                justify-content: space-between;
+
+                h4 {
+                    font-size: 18px;
+
+                    a {
+                        position: relative;
+                        overflow: hidden;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: -100%;
+                            bottom: 0px;
+                            width: 100%;
+                            height: 1px;
+                            transition: .2s;
+                            background-color: $light;
+                        }
+
+                        &:hover::before {
+                            left: 0;
+                        }
+                    }
+                }
+
+                .rate {
+                    i {
+                        color: $selectedColor;
+                    }
+
+                    span {
+                        color: $light-gray;
+                    }
+                }
+            }
+
+            .more {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+
+                .trailer {
+                    transition: .3s;
+                    border-radius: 10px;
+                    padding: 4px;
+                    padding-right: 8px;
+
+                    i {
+                        transition: .3s;
+                    }
+
+                    &:hover {
+                        background-color: rgb(59, 59, 59);
+
+                        i {
+                            color: $selectedColor;
+                        }
+                    }
+
+                }
+
+                .info-btn {
+                    color: $light;
+                    font-size: 20px;
+                    margin-right: 8px;
+                    transition: .3s;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $selectedColor;
+                    }
+                }
+
+                .info-content {
+                    .modal-content {
+                        background-color: $dark;
+
+                        .modal-header {
+                            align-items: flex-start;
+                            border-bottom: 0px;
+
+                            .modal-title {
+                                display: flex;
+
+                                .image {
+                                    width: 20%;
+                                    margin-right: 14px;
+
+                                    img {
+                                        width: 100%;
+                                        border-radius: 15px;
+                                    }
+                                }
+
+                                .title {
+                                    width: 100%;
+
+                                    .first {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+
+                                        h1 {
+                                            a {
+                                                font-size: 25px;
+                                                font-weight: 700;
+
+                                                i {
+                                                    transition: .3s;
+                                                    font-weight: 900;
+                                                }
+
+                                                &:hover i {
+                                                    color: $selectedColor;
+                                                    margin-left: 4px;
+                                                }
+                                            }
+                                        }
+
+                                        .rate {
+                                            font-size: 18px;
+                                            margin-right: 8px;
+
+                                            i {
+                                                color: $selectedColor;
+                                            }
+
+                                            .from {
+                                                color: $light-gray;
+                                            }
+                                        }
+
+                                    }
+
+                                    .genre {
+
+                                        span {
+                                            background-color: rgb(59, 59, 59);
+                                            color: $light-gray;
+                                            border-radius: 12px;
+                                            font-size: 12px;
+                                            height: max-content;
+                                            padding: 4px 8px;
+                                            margin-right: 2px;
+                                        }
+
+                                    }
+
+                                    .year {
+                                        transform: translateY(-3px);
+
+                                        span {
+                                            font-size: 14px;
+                                            color: $light-gray;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .modal-body {
+                            .intrest {
+                                p {
+                                    margin-bottom: 0;
+                                    font-weight: 600;
+                                }
+
+                                .movies {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    li::marker {
+                                        color: $selectedColor;
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+
+                            .action {
+                                display: flex;
+
+                                button {
+                                    border-radius: 16px;
+                                    background-color: #414951;
+                                    color: $links;
+                                    padding: 4px;
+
+                                    &:hover {
+                                        background-color: #4c5863;
+                                    }
+                                }
+
+                                .watchlist {
+                                    width: 75%;
+                                    margin-right: 3px;
+                                }
+
+                                .dislike {
+                                    width: 25%;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+}
