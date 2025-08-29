@@ -1,0 +1,1061 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 15px;
+}
+
+body {
+    position: relative;
+}
+
+header {
+    background-color: #086BF2;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .menu {
+    display: flex;
+    align-items: center;
+}
+
+header nav img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+header nav .menu .option {
+    overflow: hidden;
+    position: relative;
+}
+
+header nav .menu .option a {
+    padding: 0 20px;
+    color: #A6C4FC;
+    transition: .3s;
+}
+
+header nav .menu .option:hover .first {
+    transform: translateY(-30px);
+}
+
+header nav .menu .option .hover {
+    visibility: hidden;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    color: white;
+}
+
+header nav .menu .option:hover .hover {
+    visibility: visible;
+    transform: translateY(-50px);
+}
+
+header nav .sign {
+    display: flex;
+    align-items: center;
+    color: #A6C4FC;
+}
+
+header nav .sign a {
+    padding: 0 10px;
+    transition: .3s;
+}
+
+header nav .sign a:hover {
+    color: white;
+}
+
+header nav .sign .sign-up {
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+header nav .sign .sign-up a {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+header nav .sign .sign-up:hover .first {
+    transform: translateY(-60px);
+}
+
+header nav .sign .sign-up .hover {
+    visibility: hidden;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    color: white;
+    background-color: black;
+}
+
+header nav .sign .sign-up:hover .hover {
+    visibility: visible;
+    transform: translateY(-50px);
+}
+
+.cover {
+    display: flex;
+    background-color: #086BF2;
+    color: white;
+    padding-top: 75px;
+
+}
+
+.cover .content {
+    width: 50%;
+    position: relative;
+    padding-left: 100px;
+}
+
+.cover .content h2 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.cover .content p {
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.cover .content a {
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    font-family: Arial;
+}
+
+.cover .content a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.cover .content a i {
+    font-size: 16px;
+}
+
+.cover .content a span {
+    transition: .3s;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.cover .content a:hover .first {
+    transform: translateY(-40px);
+}
+
+.cover .content a .hover {
+    visibility: hidden;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    color: white;
+    margin-left: 40px;
+}
+
+.cover .content a:hover .hover {
+    visibility: visible;
+    transform: translateY(-65px);
+}
+
+.cover .content .companies {
+    margin-top: 120px;
+}
+
+.cover .content .companies p {
+    font-size: 13px;
+}
+
+.cover .content .companies .images {
+    margin-left: -10px;
+    margin-top: 10px;
+}
+
+.cover .content .companies img {
+    width: 20%;
+}
+
+.cover .robot {
+    width: 50%;
+    position: relative;
+    text-align: center;
+}
+
+@keyframes up-down {
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateY(-40px);
+    }
+}
+
+.cover .robot img {
+    width: 73%;
+    animation: up-down 1s ease infinite alternate;
+}
+
+.cover .robot span {
+    position: absolute;
+    top: 0;
+    left: 12%;
+    background-color: #3980F5;
+    padding: 20px;
+    border-radius: 20px 20px 0 20px;
+}
+
+.tools {
+    position: fixed;
+    width: 45px;
+    height: 195px;
+    z-index: 100;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid lightgray;
+    border-right: none;
+}
+
+.tools .tool {
+    border-bottom: 1px solid lightgray;
+}
+
+.tools #last-tool {
+    border-bottom: none;
+}
+
+.tools .tool a {
+    display: block;
+    padding: 12px;
+    transition: .2s;
+    position: relative;
+    border-radius: 8px 0 0 8px;
+}
+
+.tools .tool a:hover {
+    background-color: #F5F3FE;
+}
+
+.tools .tool a:hover .text {
+    transition: .3s;
+    margin-right: 0;
+    visibility: visible;
+}
+
+.tools .tool a:hover svg {
+    color: #784AFF;
+}
+
+.tools .tool a .text {
+    position: absolute;
+    background-color: white;
+    height: 90%;
+    width: max-content;
+    top: 5%;
+    right: 150%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    visibility: hidden;
+    margin-right: -30px;
+    transition: 0.1s;
+}
+
+.tools .tool a .text span {
+    color: #784AFF;
+    display: inline-block;
+}
+
+.tools .tool a .text i {
+    position: absolute;
+    font-size: 30px;
+    right: -12px;
+    top: 50%;
+    color: white;
+    transform: translateY(-50%);
+}
+
+.advanced {
+    text-align: center;
+    margin: 100px 0;
+}
+
+.advanced h2 {
+    font-size: 45px;
+    margin: 16px 0;
+}
+
+.advanced p {
+    width: 50%;
+    margin: auto;
+    color: #616161;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.advanced .points {
+    width: 75%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.advanced .points .robot-img {
+    width: 45%;
+}
+
+.advanced .points .robot-img img {
+    width: 100%;
+}
+
+.advanced .points .qualities {
+    margin-top: -50px;
+    width: 27.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.advanced .points .qualities span {
+    padding: 25px;
+    border: 1px solid #E5E5E6;
+    border-radius: 16px;
+    margin: 30px 0;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.advanced .points .qualities span:hover {
+    border-color: #086BF2;
+}
+
+.advanced .points .qualities #middle-left {
+    transform: translateX(-80px)
+}
+
+.advanced .points .qualities #middle-right {
+    transform: translateX(80px)
+}
+
+.satisfaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.satisfaction .robot {
+    width: 50%;
+}
+
+.satisfaction .robot img {
+    width: 90%;
+}
+
+.satisfaction .content {
+    width: 46%;
+}
+
+.satisfaction .content h2 {
+    font-size: 45px;
+}
+
+.satisfaction .content p {
+    color: #616161;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 25px 0;
+}
+
+.satisfaction .content a {
+    overflow: hidden;
+    position: relative;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: #086BF2;
+    color: white;
+}
+
+.satisfaction .content a:hover {
+    background-color: black;
+}
+
+.satisfaction .content a i {
+    font-size: 16px;
+}
+
+.satisfaction .content a span {
+    transition: .3s;
+    font-size: 16px;
+    display: inline-block;
+    font-family: Arial;
+}
+
+.satisfaction .content a:hover .first {
+    transform: translateY(-40px);
+}
+
+.satisfaction .content a .hover {
+    visibility: hidden;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    margin-left: 40px;
+}
+
+.satisfaction .content a:hover .hover {
+    visibility: visible;
+    transform: translateY(-65px);
+}
+
+
+.channels {
+    text-align: center;
+    margin: 150px 0;
+}
+
+.channels h2 {
+    font-size: 45px;
+    margin: 20px 0;
+}
+
+.channels p {
+    width: 50%;
+    margin: auto;
+    color: #616161;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.channels .items {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 85%;
+    margin: auto;
+}
+
+.channels .items .item {
+    border: 1px solid #E5E5E6;
+    border-radius: 20px;
+    width: 33.33%;
+    height: 100%;
+    margin: 30px 10px;
+    text-align: left;
+    padding: 25px;
+    transition: .3s;
+}
+
+.channels .items .item:hover {
+    border-color: #086BF2;
+}
+
+.channels .items .item i {
+    font-size: 50px;
+    color: #086BF2;
+}
+
+.channels .items .item h3 {
+    margin: 20px 0;
+    font-size: 22px;
+}
+
+.channels .items .item p {
+    width: 100%;
+    font-size: 16px;
+}
+
+.channels .items .item a {
+    color: #086BF2;
+    font-size: 16px;
+    display: flex;
+    padding-left: 0;
+    margin-top: 25px;
+    width: max-content;
+}
+
+.channels .items .item a span {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.channels .items .item a i {
+    font-size: 16px;
+    vertical-align: middle;
+    transition: .5s;
+    margin-top: 2px;
+}
+
+.channels .items .item a:hover i {
+    transform: translateX(8px);
+}
+
+.pricing {
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 45px;
+    margin: 20px 0;
+}
+
+.pricing p {
+    color: #616161;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+
+.pricing .plan-types {
+    padding: 6px;
+    color: #616161;
+    width: 200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #E5E5E6;
+    border-radius: 10px;
+}
+
+.pricing .plan-types .type {
+    padding: 14px;
+    position: relative;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.pricing .plan-types #monthly span {
+    color: white;
+    transition: .5s;
+}
+
+.pricing .plan-types .type .background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.pricing .plan-types #monthly .background {
+    background-color: #086BF2;
+}
+
+.pricing .plan-types #annually:hover span {
+    color: white;
+}
+
+.plan-types:has(.type:nth-of-type(2):hover) #monthly .background {
+    transform: translateX(110%);
+}
+
+.plan-types:has(.type:nth-of-type(2):hover) #monthly span {
+    color: #616161;
+}
+
+
+
+.pricing .plans {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 85%;
+    margin: auto;
+}
+
+.pricing .plans .plan {
+    padding: 20px;
+    padding-top: 45px;
+    border: 1px solid #E5E5E6;
+    border-radius: 20px;
+    text-align: left;
+    width: 33%;
+    height: 500px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing .plans .plan .title {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E5E5E6;
+}
+
+.pricing .plans .plan .title h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.pricing .plans .plan .title span {
+    color: #616161;
+}
+
+.pricing .plans .plan .title span::before {
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+}
+
+.pricing .plans .plan .title .price1::before {
+    content: "$10 ";
+}
+
+.pricing:has(.plan-types .type:nth-of-type(2):hover) .plans .plan .title .price1::before {
+    content: "$99 ";
+}
+
+.pricing .plans .plan .title .price2::before {
+    content: "$49 ";
+}
+
+.pricing:has(.plan-types .type:nth-of-type(2):hover) .plans .plan .title .price2::before {
+    content: "$549 ";
+}
+
+.pricing .plans .plan .title .price3::before {
+    content: "$99 ";
+}
+
+.pricing:has(.plan-types .type:nth-of-type(2):hover) .plans .plan .title .price3::before {
+    content: "$899 ";
+}
+
+.pricing .plans .plan .title span::after {
+    content: "month";
+}
+
+.pricing:has(.plan-types .type:nth-of-type(2):hover) .plans .plan .title span::after {
+    content: "year";
+}
+
+.pricing .plans .plan .features .feature {
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+.pricing .plans .plan .features .feature i {
+    color: #086BF2;
+    margin-right: 3px;
+}
+
+.pricing .plans #recommended {
+    border-color: #086BF2;
+    box-shadow: 0px 8px 20px #c9c9c9;
+}
+
+.pricing .plans #recommended .recommend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #086BF2;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.pricing .plans .plan .sign-up {
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.pricing .plans .plan .sign-up a {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: #086BF2;
+    color: white;
+    font-family: Arial;
+}
+
+.pricing .plans .plan .sign-up a:hover {
+    background-color: black;
+}
+
+.pricing .plans .plan .sign-up a i {
+    font-size: 16px;
+}
+
+.pricing .plans .plan .sign-up a span {
+    transition: .3s;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.pricing .plans .plan .sign-up:hover .first {
+    transform: translateY(-40px);
+}
+
+.pricing .plans .plan .sign-up a .hover {
+    visibility: hidden;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+}
+
+.pricing .plans .plan .sign-up a:hover .hover {
+    visibility: visible;
+    transform: translate(-50%, -65px);
+}
+
+
+.news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: 150px auto;
+
+}
+
+.news .robot {
+    width: 50%;
+    text-align: center;
+}
+
+.news .robot img {
+    width: 80%;
+}
+
+.news .content {
+    width: 50%;
+}
+
+.news .content h2 {
+    font-size: 45px;
+}
+
+.news .content p {
+    color: #616161;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 25px 0;
+    width: 80%;
+}
+
+.news .content .item {
+    border-top: 1px solid #E5E5E6;
+    padding: 20px 0;
+    width: 90%;
+}
+
+.news .content .item p {
+    margin: 16px 0;
+}
+
+.news .content .item a {
+    padding-left: 0;
+    transition: .3s;
+}
+
+.news .content .item .title {
+    color: black;
+}
+
+.news .content .item .title:hover {
+    color: #086BF2;
+}
+
+.news .content .item .read-more {
+    overflow: hidden;
+    position: relative;
+}
+
+.news .content .item .read-more a {
+    color: #086BF2;
+}
+
+.news .content .item .read-more:hover .first {
+    transform: translateY(-30px);
+}
+
+.news .content .item .read-more .hover {
+    visibility: hidden;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+
+.news .content .item .read-more:hover .hover {
+    visibility: visible;
+    transform: translateY(-50px);
+}
+
+.customers {
+    text-align: center;
+}
+
+.customers h2 {
+    font-size: 45px;
+    margin: 20px 0;
+}
+
+.customers p {
+    color: #616161;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.customers .comments {
+    display: flex;
+    width: 85%;
+    margin: 40px auto;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.customers .comments .comment {
+    border: 1px solid #E5E5E6;
+    border-radius: 20px;
+    margin: 0 15px;
+    text-align: left;
+    padding: 25px;
+    width: 33.33%;
+    height: 250px;
+}
+
+.customers .comment .profile {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E5E5E6;
+
+}
+
+.customers .comment .profile .photo {
+    width: 25%;
+}
+
+.customers .comment .profile .photo img {
+    width: 80%;
+    border-radius: 100%;
+}
+
+.customers .comment .profile .person {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.customers .comment .profile .name {
+    font-weight: 900;
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.customers .comment .profile .job {
+    color: #616161;
+}
+
+.customers .comment .content p {
+    margin-top: 15px;
+    color: black;
+}
+
+.trial {
+    width: 85%;
+    background-color: #086BF2;
+    position: relative;
+    margin: 150px auto;
+    color: white;
+    border-radius: 20px;
+}
+
+.trial .content {
+    padding: 70px 60px;
+}
+
+.trial h2 {
+    font-size: 45px;
+}
+
+.trial p {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 25px 0;
+    width: 40%;
+}
+
+.trial a {
+    overflow: hidden;
+    position: relative;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    font-family: Arial;
+}
+
+.trial a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.trial a i {
+    font-size: 16px;
+}
+
+.trial a span {
+    transition: .3s;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.trial a:hover .first {
+    transform: translateY(-40px);
+}
+
+.trial a .hover {
+    visibility: hidden;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    color: white;
+    margin-left: 40px;
+}
+
+.trial a:hover .hover {
+    visibility: visible;
+    transform: translateY(-65px);
+}
+
+@keyframes trial-robot {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+    50% {
+        transform: rotate(10deg) scale(1);
+    }
+    100% {
+        transform: rotate(10deg) scale(1.1);
+    }
+}
+
+.trial .robot {
+    position: absolute;
+    right: 5%;
+    top: -25%;
+    text-align: right;
+    animation: trial-robot 6s linear infinite alternate ;
+}
+
+.trial .robot img {
+    width: 55%;
+}
+
+footer {
+    background-color: #1F212B;
+    margin-top: 200px;
+    font-family: sans-serif;
+}
+
+footer .top {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 0;
+    border-bottom: 1px solid #383942;
+}
+
+footer .top .logo{
+    flex-grow: 2;
+}
+
+footer .top .logo img {
+    width: 35%;
+}
+
+footer .top .logo p {
+    color: #9E9E9E;
+    margin-top: 20px;
+}
+
+footer .top .item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top .item h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 100;
+}
+
+footer .top .item a {
+    padding: 10px 0;
+    color: #9E9E9E;
+    transition: .3s;
+}
+
+footer .top .item a:hover {
+    color: #086BF2;
+}
+
+footer .bottom {
+    width: 85%;
+    margin: auto;
+    color: #9E9E9E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+footer .bottom a {
+    transition: .3s;
+}
+
+footer .bottom a:hover {
+    color: #086BF2;
+}

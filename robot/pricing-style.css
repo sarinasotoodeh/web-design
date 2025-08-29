@@ -1,0 +1,782 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 15px;
+}
+
+p {
+    line-height: 30px;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    position: relative;
+}
+
+header {
+    background-color: #086BF2;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .menu {
+    display: flex;
+    align-items: center;
+}
+
+header nav img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+header nav .menu .option {
+    overflow: hidden;
+    position: relative;
+}
+
+header nav .menu .option a {
+    padding: 0 20px;
+    color: #A6C4FC;
+    transition: .3s;
+}
+
+header nav .menu .option:hover .first {
+    transform: translateY(-30px);
+}
+
+header nav .menu .option .hover {
+    visibility: hidden;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    color: white;
+}
+
+header nav .menu .option:hover .hover {
+    visibility: visible;
+    transform: translateY(-50px);
+}
+
+header nav .sign {
+    display: flex;
+    align-items: center;
+    color: #A6C4FC;
+}
+
+header nav .sign a {
+    padding: 0 10px;
+    transition: .3s;
+}
+
+header nav .sign a:hover {
+    color: white;
+}
+
+header nav .sign .sign-up {
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+header nav .sign .sign-up a {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+header nav .sign .sign-up:hover .first {
+    transform: translateY(-60px);
+}
+
+header nav .sign .sign-up .hover {
+    visibility: hidden;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    color: white;
+    background-color: black;
+}
+
+header nav .sign .sign-up:hover .hover {
+    visibility: visible;
+    transform: translateY(-50px);
+}
+
+
+.cover {
+    background-color: #086BF2;
+    color: white;
+    padding-top: 60px;
+    text-align: center;
+    position: relative;
+    height: 660px;
+}
+
+.cover .description h1{
+    font-size: 65px;
+    width: 65%;
+    margin: auto;
+}
+
+.cover .description p{
+    width: 50%;
+    margin: 15px auto;
+    font-size: 18px;
+}
+
+
+.pricing {
+    position: absolute;
+    bottom: -50%;
+    left: 7.5%;
+    text-align: center;
+    background-color: white;
+    border-radius: 25px;
+    color: black;
+    width: 85%;
+}
+
+.pricing .plan-types-padding {
+    padding: 5px;
+    border: 1px solid #E5E5E6;
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.pricing .plan-types {
+    color: #616161;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.pricing .plan-types .type {
+    padding: 14px;
+    position: relative;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.pricing .plan-types #monthly span {
+    color: white;
+    transition: .5s;
+    z-index: 8;
+}
+
+.pricing .plan-types .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.pricing .plan-types .background {
+    background-color: #086BF2;
+}
+
+.pricing .plan-types #annually:hover span {
+    color: white;
+}
+
+/* annually:hover -> background */
+.plan-types:has(.type:nth-of-type(3):hover) .background {
+    transform: translateX(100%);
+}
+
+/* annually:hover -> #monthly span */
+.plan-types:has(.type:nth-of-type(3):hover) #monthly span {
+    color: #616161;
+}
+
+.pricing .plans {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: auto;
+}
+
+.pricing .plans .plan {
+    padding: 20px;
+    padding-top: 45px;
+    border: 1px solid #E5E5E6;
+    border-radius: 20px;
+    text-align: left;
+    width: 31%;
+    height: 550px;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing .plans .plan .title {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E5E5E6;
+}
+
+.pricing .plans .plan .title h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.pricing .plans .plan .title span {
+    color: #616161;
+}
+
+.pricing .plans .plan .title span::before {
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+}
+
+.pricing .plans .plan .title .price1::before {
+    content: "$10 ";
+}
+
+.pricing:has(.plan-types .type:nth-of-type(3):hover) .plans .plan .title .price1::before {
+    content: "$99 ";
+}
+
+.pricing .plans .plan .title .price2::before {
+    content: "$49 ";
+}
+
+.pricing:has(.plan-types .type:nth-of-type(3):hover) .plans .plan .title .price2::before {
+    content: "$549 ";
+}
+
+.pricing .plans .plan .title .price3::before {
+    content: "$99 ";
+}
+
+.pricing:has(.plan-types .type:nth-of-type(3):hover) .plans .plan .title .price3::before {
+    content: "$899 ";
+}
+
+.pricing .plans .plan .title span::after {
+    content: "month";
+}
+
+.pricing:has(.plan-types .type:nth-of-type(3):hover) .plans .plan .title span::after {
+    content: "year";
+}
+
+.pricing .plans .plan .features .feature {
+    margin: 14px 0;
+    font-size: 20px;
+}
+
+.pricing .plans .plan .features .feature i {
+    color: #086BF2;
+    margin-right: 3px;
+}
+
+.pricing .plans #recommended {
+    border-color: #086BF2;
+    box-shadow: 0px 8px 20px #c9c9c9;
+}
+
+.pricing .plans #recommended .recommend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #086BF2;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.pricing .plans .plan .sign-up {
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.pricing .plans .plan .sign-up a {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: #086BF2;
+    color: white;
+    font-family: Arial;
+}
+
+.pricing .plans .plan .sign-up a:hover {
+    background-color: black;
+}
+
+.pricing .plans .plan .sign-up a i {
+    font-size: 16px;
+}
+
+.pricing .plans .plan .sign-up a span {
+    transition: .3s;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.pricing .plans .plan .sign-up:hover .first {
+    transform: translateY(-40px);
+}
+
+.pricing .plans .plan .sign-up a .hover {
+    visibility: hidden;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+}
+
+.pricing .plans .plan .sign-up a:hover .hover {
+    visibility: visible;
+    transform: translate(-50%, -65px);
+}
+
+.tools {
+    position: fixed;
+    width: 45px;
+    height: 195px;
+    z-index: 100;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid lightgray;
+    border-right: none;
+}
+
+.tools .tool {
+    border-bottom: 1px solid lightgray;
+}
+
+.tools #last-tool {
+    border-bottom: none;
+}
+
+.tools .tool a {
+    display: block;
+    padding: 12px;
+    transition: .2s;
+    position: relative;
+    border-radius: 8px 0 0 8px;
+}
+
+.tools .tool a:hover {
+    background-color: #F5F3FE;
+}
+
+.tools .tool a:hover .text {
+    transition: .3s;
+    margin-right: 0;
+    visibility: visible;
+}
+
+.tools .tool a:hover svg {
+    color: #784AFF;
+}
+
+.tools .tool a .text {
+    position: absolute;
+    background-color: white;
+    height: 90%;
+    width: max-content;
+    top: 5%;
+    right: 150%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    visibility: hidden;
+    margin-right: -30px;
+    transition: 0.1s;
+}
+
+.tools .tool a .text span {
+    color: #784AFF;
+    display: inline-block;
+}
+
+.tools .tool a .text i {
+    position: absolute;
+    font-size: 30px;
+    right: -12px;
+    top: 50%;
+    color: white;
+    transform: translateY(-50%);
+}
+
+
+
+.faq {
+    margin: 550px auto 200px;
+    text-align: center;
+    width: 85%;
+}
+
+.faq h2 {
+    font-size: 45px;
+    margin: 20px 0;
+}
+
+.faq p {
+    color: #616161;
+    font-size: 18px;
+}
+
+.faq .items {
+    margin-top: 30px;
+}
+
+.faq .items .item {
+    border: 1px solid #E5E5E6;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 15px 0;
+    height: 85px;
+    box-shadow: 0px 8px 20px 4px #f0f0f0;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.faq .items .item:hover {
+    height: 180px;
+}
+
+.faq .items .item .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.faq .items .item .question h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333333;
+    transition: .3s;
+}
+
+.faq .items .item:hover h3{
+    color: #086BF2;
+}
+
+.faq .items .item .question .icon {
+    height: max-content;
+    color: #333333;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid black;
+    transition: .3s;
+}
+
+
+.faq .items .item:hover .icon {
+    color: #086BF2;
+    border-color: #086BF2;
+}
+
+.faq .items .item .question #minus {
+    display: none;
+}
+
+.faq .items .item:hover #minus {
+    display: inline;
+}
+
+.faq .items .item:hover #plus {
+    display: none;
+} 
+
+.faq .items .item .answer {
+    text-align: left;
+    margin-top: 25px;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.faq .items .item:hover .answer {
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.trial {
+    width: 85%;
+    background-color: #086BF2;
+    position: relative;
+    margin: 150px auto;
+    color: white;
+    border-radius: 20px;
+}
+
+.trial .content {
+    padding: 70px 60px;
+}
+
+.trial h2 {
+    font-size: 45px;
+}
+
+.trial p {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 25px 0;
+    width: 40%;
+}
+
+.trial a {
+    overflow: hidden;
+    position: relative;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    font-family: Arial;
+}
+
+.trial a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.trial a i {
+    font-size: 16px;
+}
+
+.trial a span {
+    transition: .3s;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.trial a:hover .first {
+    transform: translateY(-40px);
+}
+
+.trial a .hover {
+    visibility: hidden;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    color: white;
+    margin-left: 40px;
+}
+
+.trial a:hover .hover {
+    visibility: visible;
+    transform: translateY(-65px);
+}
+
+@keyframes trial-robot {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+    50% {
+        transform: rotate(10deg) scale(1);
+    }
+    100% {
+        transform: rotate(10deg) scale(1.1);
+    }
+}
+
+.trial .robot {
+    position: absolute;
+    right: 5%;
+    top: -25%;
+    text-align: right;
+    animation: trial-robot 6s linear infinite alternate ;
+}
+
+.trial .robot img {
+    width: 55%;
+}
+
+footer {
+    background-color: #1F212B;
+    margin-top: 200px;
+    font-family: sans-serif;
+}
+
+footer .top {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 0;
+    border-bottom: 1px solid #383942;
+}
+
+footer .top .logo{
+    flex-grow: 2;
+}
+
+footer .top .logo img {
+    width: 35%;
+}
+
+footer .top .logo p {
+    color: #9E9E9E;
+    margin-top: 20px;
+}
+
+footer .top .item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top .item h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 100;
+}
+
+footer .top .item a {
+    padding: 10px 0;
+    color: #9E9E9E;
+    transition: .3s;
+}
+
+footer .top .item a:hover {
+    color: #086BF2;
+}
+
+footer .bottom {
+    width: 85%;
+    margin: auto;
+    color: #9E9E9E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+footer .bottom a {
+    transition: .3s;
+}
+
+footer .bottom a:hover {
+    color: #086BF2;
+}
