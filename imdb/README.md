@@ -25,8 +25,19 @@ Open any of the HTML files above directly in a browser — no build step needed.
 ![](./demo/demo1.png)
 ![](./demo/demo2.png)
 ![](./demo/demo3.png)
-![](./demo/demo3.png)
-
+![](./demo/demo4.png)
+![](./demo/demo5.png)
+![](./demo/demo6.png)
+![](./demo/demo7.png)
+![](./demo/demo8.png)
+![](./demo/demo9.png)
+![](./demo/demo10.png)
+![](./demo/demo11.png)
+![](./demo/demo12.png)
+![](./demo/demo13.png)
+![](./demo/demo14.png)
+![](./demo/demo15.png)
+![](./demo/demo16.png)
 
 
 Built by Sarina Sotoodeh (Jun 2025).
