@@ -22,8 +22,12 @@ HTML, SCSS/CSS, Bootstrap 5
 Open any of the HTML files above directly in a browser — no build step needed. (The `.scss` files are already compiled to the included `.min.css` files.)
 
 ## Screenshots / demo
+![](./demo/demo1.png)
+![](./demo/demo2.png)
+![](./demo/demo3.png)
+![](./demo/demo3.png)
 
-*(coming soon)*
+
 
 Built by Sarina Sotoodeh (Jun 2025).
 
